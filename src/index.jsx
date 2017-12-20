@@ -19,7 +19,7 @@ class App extends Component {
     const { messageBase, count } = this.state;
     const nxCount = count + 1;
     this.setState({
-      ...this.state,
+      ...this.state,  // Spread properties
       message: messageBase + '!'.repeat(nxCount),
       count: nxCount,
     });
@@ -48,15 +48,7 @@ class App extends Component {
 
 // Child Component
 const PlusMinusButton = ({ plusMinus, changeCount }) => {
-  if(plusMinus === '+') {
-    return (
-      <button onClick={changeCount}>+</button>
-    );
-  } else {
-    return (
-      <button onClick={changeCount}>-</button>
-    );
-  }
+  return <button onClick={changeCount}>{plusMinus}</button>;
 };
 
 // Initialization
