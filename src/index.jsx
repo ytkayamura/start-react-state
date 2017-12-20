@@ -6,8 +6,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      messageBase: 'Hello React Redux',
-      message: 'Hello React Redux!',
+      messageBase: 'Hello React',
+      message: 'Hello React!',
       count: 1,
     };
     this.incrementCount = this.incrementCount.bind(this);
